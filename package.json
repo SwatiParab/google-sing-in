@@ -1,0 +1,15 @@
+{
+  "name": "google",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./bin/www"
+  },
+  "author": "",
+  "license": "ISC"
+}
