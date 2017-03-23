@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox CSS</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+	<style type="text/css">
+		p {
+			font-size: 20px;
+			margin: 5px 0; 
+		}
+		label {
+		  display: flex;
+		  margin-bottom: 10px;  
+		  /* Dont vertical center: */
+		  align-items: flex-start;  
+		}
+		label:last-child {
+		  /* Vertical centering on last row  */
+		  align-items: center;  
+		}
+		input[type=radio] {
+		  flex: none;
+		  margin-right: 10px;
+		}
+		.text {
+		  width: 50px;
+		  flex: none;  
+		}
+		input[type=text] {
+		  flex: auto;
+		  padding: 10px 0;
+		}
+		.descp-list {
+			border: 1px solid red;
+			display: flex;
+			flex-direction: column;
+		}
+	</style>
+</head>
+<body>
+	<h2>Flex Css</h2>
+	<p>Use of flexbox ensures that elements behave predictably when the page layout must accommodate different screen sizes and different display devices.</p>
+	<p>Form example as below:</p>
+	<form>
+		<label>
+	    <input type="radio" name="vyber" checked>
+	    Lorem ipsum dolor sit amet, consectetur adipisicing elit error quoLorem ipsum dolor sit amet, consectetur adipisicing elit error quo
+	  </label>  
+	  <label>
+	    <input type="radio" name="vyber">
+	    Normal label
+	  </label>
+	  <label>
+	    <input type="radio" name="vyber">
+	    Lorem ipsum dolor sit amet, consectetur adipisicing elit error quoLorem ipsum dolor sit amet, consectetur adipisicing elit error quo
+	    <!-- <span class="text">
+	      Other:
+	    </span> -->
+	    <input type="text" value="Text input" />
+	  </label>  
+	</form>
+	<ul class="descp-list">
+		<li>
+			<div class="descp">
+				<h2>Advantages</h2>
+				<ul>
+					<li>Source order independence. Could be of tremendous value for responsive layouts and eliminates the need for JS for this.</li>
+					<li>Vertical centering</li>
+					<li>Equal heights</li>
+					<li>Flex boxes move along interchangebly the X and Y axis, with such ease, that you can really change things around with a couple of properties.</li>
+					<li>Boxes grow and shrink, can be columns or rows, fit to the available space however you wish to declare this.</li>
+					<li>There are multiple ways to do the same thing with flexbox.</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="descp">
+				<h2>Disadvantages</h2>
+				<ul>
+					<li>Syntax is initially unintuitive. You spend the first few hours looking at demos saying WOW, followed by WTF.</li>
+					<li>I've been noticing weird cross browser inconsistencies that I need to document in another article. Hopefully file some bugs, I already have one in mind for Firefox (if it's not filed already). I'm scared... It took me a long time to figure some of these out.</li>
+					<li>A deep understanding of Flexbox takes a while. Once the layout gets more complex, or you add a couple of divs, things can get confusing. I'm going to document this more in an article.</li>
+					<li>Lots of vendor prefixes, with a different syntax for older IE and Webkit. Use something like Autoprefixr to work around this. Or write some mixins. Or do something..</li>
+					<li>Doesn't work on IE9. If you don't have to support IE9, you're fine.</li>
+					<li>Reports of the older syntax impacting performance. I wouldn't care too much about this honestly, especially if you were using JS to do the things Flexbox now can...</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>
